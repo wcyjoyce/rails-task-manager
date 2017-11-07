@@ -1,0 +1,32 @@
+<div class="description">
+  <h2><%= @task.title %></h2>
+  <h4><%= @task.details %></h4>
+
+<br>
+
+<p>
+  <% if @task.completed %>
+    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+    <%= "This task is completed." %>
+  <% else %>
+    <i class="fa fa-square-o" aria-hidden="true"></i>
+    <%= "This task hasn't been completed yet." %>
+  <% end %>
+</p>
+</div>
+
+<br>
+
+<div class="link">
+  <%= link_to tasks_edit_path, class: "btn btn-default btn-sm" do %>
+    <i class="fa fa-pencil" aria-hidden="true"></i> EDIT THIS TASK
+  <% end %>
+</div>
+
+<hr>
+
+<div class="link">
+  <%= link_to tasks_path do %>
+  <i class="fa fa-undo" aria-hidden="true"></i> BACK TO LIST
+  <% end %>
+</div>

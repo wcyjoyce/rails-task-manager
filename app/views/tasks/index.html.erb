@@ -1,0 +1,17 @@
+<ol>
+  <% @tasks.each do |task| %>
+    <li>
+      <%= link_to task.title, task_path(task) %>
+      <%= link_to task_path(task), method: :delete,
+        data: { confirm: "Are you sure you want to delete the task?" } do %>
+          <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <% end %>
+    </li>
+  <% end %>
+</ol>
+
+<div class="link">
+  <%= link_to tasks_new_path do %>
+    <i class="fa fa-plus" aria-hidden="true"></i> ADD A NEW TASK
+  <% end %>
+</div>

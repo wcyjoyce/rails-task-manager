@@ -1,0 +1,13 @@
+<h2>Edit a Task</h2>
+
+<div class="form">
+  <%= render "form", task: @task %>
+</div>
+
+<hr>
+
+<div class="link">
+  <%= link_to tasks_path do %>
+  <i class="fa fa-undo" aria-hidden="true"></i> BACK TO LIST
+  <% end %>
+</div>

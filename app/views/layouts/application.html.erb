@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTaskManager</title>
+    <title>Rails: Task Manager</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   </head>
 
   <body>
-    <%= yield %>
+    <h1>My Task List</h1>
+    <div class="wrapper">
+      <%= yield %>
+    </div>
   </body>
+
+  <footer>
+    This is a footer - just to make sure it shows on every page.
+  </footer>
+
 </html>

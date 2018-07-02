@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   # Delete a task
   delete "tasks/:id", to: "tasks#destroy"
+
+  root to: "tasks#index"
 end
